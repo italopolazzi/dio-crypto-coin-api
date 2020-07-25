@@ -25,8 +25,11 @@ const displayErrorMessage = (message, timeout = 5000) => {
 
 const loadCMCApiData = async (API_KEY = CMC_API_KEY) => {
   try {
-    const url = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=${API_KEY}`
-    const data = await fetch(url)
+    // const url = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=${API_KEY}`
+    // const response = await fetch(url)
+    // const data = await response.json()
+    // console.log(data);
+    
   } catch (error) {
     throw new CoinMarketCapError(error.message)
   }

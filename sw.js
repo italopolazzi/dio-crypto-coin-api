@@ -1,6 +1,6 @@
 const self = this
 
-const STATIC_CACHE_NAME = 'static-cache-v4'
+const STATIC_CACHE_NAME = 'static-cache-v5'
 const assets = [
   '/',
   '/index.html',
@@ -42,6 +42,12 @@ self.addEventListener('fetch', event => {
 })
 
 self.addEventListener('activate', event => {
-  console.log(event);
-
+  event.waitUntil(
+    caches.keys().then(keys => {
+      return Promise.all(
+        keys.filter(key => key !== STATIC_CACHE_NAME)
+          .map(key => caches.delete(key))
+      )
+    })
+  )
 })

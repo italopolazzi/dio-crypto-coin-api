@@ -4,38 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoinMarketCap Project - Ítalo Polazzi</title>
+    <title>You're offline - CoinMarketCap Project</title>
     <link rel="stylesheet" href="./styles/index.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#2196f3">
     <link rel="app-touch-icon" href="./img/icons/icon-96x96.png">
     <meta name="apple-mobile-web-app-status-bar" content="#2196f3">
-
 </head>
 
 <body>
 
-    <header>
-        <h1 class="text-4xl">CoinMarketCap - Ítalo Polazzi</h1>
-    </header>
-
     <main class="lg:container lg:mx-auto p-4">
-
         <noscript>JavaScript is not supported or is not activated in your browser.</noscript>
-        <div id="toasts"></div>
-        <section id="app">
+        <article class="overflow-hidden relative flex items-center rounded-lg shadow-xl hover:shadow-xs">
 
-            <div id="coins" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-
-
-
+            <div class="p-4 w-full">
+                <header class="mb-8">
+                    <h1 class="text-4xl font-bold">You're offline</h1>
+                    <a class="no-underline text-blue-500" href="/index.html">Back to the home</a>
+                </header>
             </div>
-
-        </section>
+        </article>
     </main>
-
-    <script src="./app.js" type="module"></script>
 </body>
 
 </html>

@@ -16,7 +16,7 @@
 
 <body class="bg-blue-300">
 
-    <nav class="w-full text-white fixed z-20 bg-blue-300 flex items-center justify-center shadow-xl">
+    <nav class="w-full text-white fixed z-20 top-0 bg-blue-300 flex items-center justify-center shadow-xl">
         <ul class="w-full lg:w-1/2 m-2 grid grid-flow-col gap-2 text-center text-2xl">
             <li class="transition duration-300 hover:opacity-50">
                 <a href="#">Home</a>
@@ -30,7 +30,7 @@
         </ul>
     </nav>
 
-    <header role="banner" class=" flex flex-col lg:flex-row items-center justify-start">
+    <header role="banner" class="mt-20 lg:mt-0 flex flex-col lg:flex-row items-center justify-start">
 
         <div class="header-text lg:w-1/2 p-4 lg:m-20">
             <h1 class="text-6xl ">CoinMarketCap</h1>
@@ -86,33 +86,64 @@
         </div>
     </main>
 
-    <footer id="footer" class="bg-white p-4 grid grid-cols-2">
-        <div class="card">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iste explicabo odit temporibus cumque animi dolore perspiciatis eos quis autem, vero amet aut eligendi porro nemo minima nihil sapiente aperiam?
-        </div>
+    <footer id="footer" class=" p-4">
+        <div class="cards p-4 rounded shadow-xl  lg:flex ">
 
-        <div class="card">
-            <ul class="w-full flex justify-start">
-                <li class="p-2">
-                    <a href="https://codepen.io/italopolazzi" target="blank"><img class="w-8 h-8" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="italopolazzi" /></a>
-                </li>
-                <li class="p-2">
-                    <a href="https://twitter.com/italopolazzi" target="blank"><img class="w-8 h-8" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="italopolazzi" /></a>
-                </li>
-                <li class="p-2">
-                    <a href="https://linkedin.com/in/italopolazzi" target="blank"><img class="w-8 h-8" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="italopolazzi"></a>
-                </li>
-                <li class="p-2">
-                    <a href="https://www.behance.net/italopolazzi" target="blank"><img class="w-8 h-8" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/behance.svg" alt="italopolazzi" /></a>
-                </li>
-                <li class="p-2">
-                    <a href="https://medium.com/@italopolazzi" target="blank"><img class="w-8 h-8" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg" alt="@italopolazzi" /></a>
-                </li>
-            </ul>
+
+            <div class="card p-4 ">
+                <div class="font-bold text-2xl">CoinMarketCap</div>
+                <p class="my-4">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum iste explicabo odit temporibus cumque animi dolore perspiciatis eos quis autem, vero amet aut eligendi porro nemo minima nihil sapiente aperiam?
+                </p>
+                <ul class="w-full flex justify-start">
+                    <li class="p-2">
+                        <a href="https://codepen.io/italopolazzi" target="blank">CodePen</a>
+                    </li>
+                    <li class="p-2">
+                        <a href="https://twitter.com/italopolazzi" target="blank">Twitter</a>
+                    </li>
+                    <li class="p-2">
+                        <a href="https://linkedin.com/in/italopolazzi" target="blank">LinkedIn</a>
+                    </li>
+                    <li class="p-2">
+                        <a href="https://www.behance.net/italopolazzi" target="blank">Behance</a>
+                    </li>
+                    <li class="p-2">
+                        <a href="https://medium.com/@italopolazzi" target="blank">Medium</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card p-4 lg:w-1/2">
+                <p class="my-4">
+                    LollipopSquare,<br> Downtown 237-239 Beautiful Horizon<br> Robina QLD 4226 FakeCountry<br>
+                    <a class="underline" href="mailto:itpzzi@gmail.com">itpzzi@gmail.com</a>
+                </p>
+                <ul class="w-full flex justify-start">
+                    <li class="p-2">
+                        <a href="https://codepen.io/italopolazzi" target="blank"><img class="w-4 h-4" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="italopolazzi" /></a>
+                    </li>
+                    <li class="p-2">
+                        <a href="https://twitter.com/italopolazzi" target="blank"><img class="w-4 h-4" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="italopolazzi" /></a>
+                    </li>
+                    <li class="p-2">
+                        <a href="https://linkedin.com/in/italopolazzi" target="blank"><img class="w-4 h-4" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="italopolazzi"></a>
+                    </li>
+                    <li class="p-2">
+                        <a href="https://www.behance.net/italopolazzi" target="blank"><img class="w-4 h-4" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/behance.svg" alt="italopolazzi" /></a>
+                    </li>
+                    <li class="p-2">
+                        <a href="https://medium.com/@italopolazzi" target="blank"><img class="w-4 h-4" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg" alt="@italopolazzi" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-full text-xs mt-4">
+            &copy; Copyright 2020. All rights reserved. Made With Love by Ítalo Polazzi. <a class="underline" href="#">Privacy Policy</a> — <a class="underline" href="#">Terms and Conditions</a> — Web Design by <a class="underline" href="https://github.com/italopolazzi">Ítalo Polazzi</a>
         </div>
     </footer>
 
-    <script src="./app.js" type="module"></script>
+    <!-- <script src="./app.js" type="module"></script> -->
 </body>
 
 </html>

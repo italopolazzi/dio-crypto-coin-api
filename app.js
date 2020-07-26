@@ -49,7 +49,7 @@ const renderCMCApiData = (data, quantity = 10, start = 0) => {
 
   const items = data.slice(start, quantity).forEach(item => {
     const { name, first_historical_data: date, rank, symbol } = item
-    
+
     document.querySelector("#coins").innerHTML += template({
       name, date, rank, symbol
     })
@@ -58,18 +58,34 @@ const renderCMCApiData = (data, quantity = 10, start = 0) => {
 
 }
 
-const displayErrorMessage = (message, timeout = 5000) => {
+const displayMessage = (message, {
+  type = 'alert',
+  timeout = 5000
+} = {}) => {
+
+  const toasts = document.querySelector("#toasts")
   const toast = document.createElement('div')
   toast.classList.add('toast')
-  toast.classList.add('error')
+  toast.classList.add(type)
   toast.setAttribute('role', 'alert')
   toast.appendChild(document.createTextNode(message))
-  document.body.appendChild(toast)
+  toasts.appendChild(toast)
 
   const t = setTimeout(() => {
-    document.body.removeChild(toast)
+    console.log("CALLLED");
+    
+    toasts.removeChild(toast)
     clearTimeout(t)
   }, timeout);
+
+}
+
+const displayErrorMessage = (message) => {
+  displayMessage(message, { type: 'error' })
+}
+
+const displaySuccessMessage = (message) => {
+  displayMessage(message, { type: 'success' })
 }
 
 const loadCMCApiData = async (API_KEY = CMC_API_KEY) => {
@@ -85,10 +101,20 @@ const loadCMCApiData = async (API_KEY = CMC_API_KEY) => {
 }
 
 const initApp = async () => {
+
+  window.addEventListener("offline", () => {
+    displayErrorMessage("You are offline!")
+  });
+  window.addEventListener("online", () => {
+    displaySuccessMessage("You are online!")
+  });
+
   try {
     getAppElement()
     const data = await loadCMCApiData()
     renderCMCApiData(data, 10)
+
+
 
   } catch (error) {
     switch (error.code) {

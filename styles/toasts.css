@@ -1,18 +1,33 @@
-.toast {
+#toasts {
     position: absolute;
     right: 0;
     top: 0;
-    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+
+.toast {
+    margin-top: 1rem;
     padding: 1rem;
-    background: rgba(0, 0, 255, 0.4);
+    background: transparent;
     backdrop-filter: blur(1rem);
     border: thin solid currentColor;
     border-radius: .25rem;
-    width: 25%;
+    width: 100%;
+    border-left: 1rem solid currentColor;
 }
 
 .toast.error {
-    background: rgba(255, 0, 0, 0.4);
+    border-left-color: rgba(255, 0, 0, 0.4);
+}
+
+.toast.success {
+    border-left-color: rgba(0, 255, 0, 0.4);
+}
+
+.toast.info {
+    border-left-color: rgba(0, 0, 255, 0.4)
 }
 
 [role="alert"]:empty {

@@ -1,6 +1,6 @@
 const self = this
 
-const STATIC_CACHE_NAME = 'static-cache-v1'
+const STATIC_CACHE_NAME = 'static-cache-v4'
 const assets = [
   '/',
   '/index.html',

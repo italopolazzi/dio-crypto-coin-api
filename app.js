@@ -50,7 +50,7 @@ const renderCMCApiData = (data, quantity = 10, start = 0) => {
   const items = data.slice(start, quantity).forEach(item => {
     const { name, first_historical_data: date, rank, symbol } = item
 
-    document.querySelector("#coins").innerHTML += template({
+    document.querySelector("#coins div").innerHTML += template({
       name, date, rank, symbol
     })
   })

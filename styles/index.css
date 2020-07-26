@@ -6,3 +6,11 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+header[role="banner"] img {
+    max-height: 300px;
+}
+
+#app {
+    position: relative;
+}

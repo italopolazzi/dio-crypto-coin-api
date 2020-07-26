@@ -16,26 +16,344 @@
 
 <body>
 
-    <header>
-        <h1 class="text-4xl">CoinMarketCap - Ítalo Polazzi</h1>
+
+
+    <header role="banner" class="bg-blue-100 flex flex-col lg:flex-row items-center justify-start">
+
+        <div class="header-text lg:w-1/2 p-4 lg:m-20">
+            <h1 class="text-6xl ">CoinMarketCap</h1>
+            <p class="text-xl mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas doloremque autem rerum a quis quia quisquam officia in deleniti doloribus non expedita nulla esse vitae dolor, aperiam inventore beatae voluptatum.
+            </p>
+            <ul class="w-full flex justify-start">
+                <li class="p-2">
+                    <a href="https://codepen.io/italopolazzi" target="blank"><img class="w-8 h-8" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/codepen.svg" alt="italopolazzi" /></a>
+                </li>
+                <li class="p-2">
+                    <a href="https://twitter.com/italopolazzi" target="blank"><img class="w-8 h-8" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="italopolazzi" /></a>
+                </li>
+                <li class="p-2">
+                    <a href="https://linkedin.com/in/italopolazzi" target="blank"><img class="w-8 h-8" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="italopolazzi"></a>
+                </li>
+                <li class="p-2">
+                    <a href="https://www.behance.net/italopolazzi" target="blank"><img class="w-8 h-8" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/behance.svg" alt="italopolazzi" /></a>
+                </li>
+                <li class="p-2">
+                    <a href="https://medium.com/@italopolazzi" target="blank"><img class="w-8 h-8" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg" alt="@italopolazzi" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="w-full h-full">
+            <picture>
+                <source media="(min-width:651px)" srcset="https://picsum.photos/id/341/920">
+                <source media="(max-width:650px)" srcset="https://picsum.photos/id/341/650">
+                <source media="(max-width:465px)" srcset="https://picsum.photos/id/341/465">
+                <source media="(max-width:320px)" srcset="https://picsum.photos/id/341/320">
+                <source media="(max-width:320px)" srcset="https://picsum.photos/id/341/320">
+                <img class="mw-auto w-full h-auto object-cover" src="https://picsum.photos/id/341/150" alt="">
+            </picture>
+
+        </div>
     </header>
+
+    <nav class="w-full lg:w-1/4 absolute z-10 top-0 right-0">
+
+    </nav>
 
     <main class="lg:container lg:mx-auto p-4">
 
         <noscript>JavaScript is not supported or is not activated in your browser.</noscript>
         <div id="toasts"></div>
-        <section id="app">
+        <div id="app">
 
-            <div id="coins" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <section id="coins" class="bg-white p-8 shadow-xl rounded-lg">
+                <h2 class="text-4xl">Coins</h2>
+                <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
 
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
 
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
 
-            </div>
+                            </footer>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
 
-        </section>
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
+
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
+
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
+
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
+
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
+
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
+
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
+
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
+
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
+
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </article>
+                    <article class="overflow-hidden relative flex items-center rounded shadow-xl hover:shadow-xs">
+                        <div class="ml-4 flex-shrink-0 overflow-hidden rounded-full">
+                            <img class="h-20 w-20 object-cover" src="/img/coin.jpg" alt="">
+                        </div>
+                        <div class="p-4 w-full">
+                            <header class="mb-8">
+                                <h1 class="text-4xl font-bold">${data.name}</h1>
+                                <h2>${data.symbol}</h2>
+                            </header>
+
+                            <footer class="flex justify-between">
+                                <div class="ranking">
+                                    <div class="text-lg font-bold">Ranking</div>
+                                    <div class="text-lg">${data.rank}</div>
+                                </div>
+                                <div class="year">
+                                    <div class="text-lg font-bold">Year</div>
+                                    <time datetime="${data.date}">${data.year}</time>
+                                </div>
+
+                            </footer>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
     </main>
 
-    <script src="./app.js" type="module"></script>
+    <!-- <script src="./app.js" type="module"></script> -->
 </body>
 
 </html>

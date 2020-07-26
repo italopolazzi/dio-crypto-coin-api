@@ -12,6 +12,9 @@ const assets = [
   '/styles/index.css',
   '/styles/fonts.css',
   '/styles/toasts.css',
+  '/scripts/ui.js',
+  '/scripts/codeMarketCap.js',
+  '/scripts/serviceWorker.js',
   '/img/coin.jpg',
   'https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&display=swap',
   'https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css'

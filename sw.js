@@ -6,6 +6,7 @@ const assets = [
   '/index.html',
   '/app.js',
   '/errors.js',
+  '/manifest.json',
   '/styles/index.css',
   '/styles/fonts.css',
   '/styles/toasts.css',
@@ -29,10 +30,14 @@ self.addEventListener('install', event => {
   )
 
 })
+
 self.addEventListener('fetch', event => {
-  // console.log(event);
-  console.log(event.request);
-  
+  event.respondWith(
+    caches.match(event.request)
+      .then(cacheResponse => {
+        return cacheResponse || fetch(event.request)
+      })
+  )
 
 })
 

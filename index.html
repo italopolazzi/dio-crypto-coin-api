@@ -7,6 +7,11 @@
     <title>CoinMarketCap Project - Ítalo Polazzi</title>
     <link rel="stylesheet" href="./styles/index.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#2196f3">
+    <link rel="app-touch-icon" href="./img/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#2196f3">
+
 </head>
 
 <body>
@@ -29,7 +34,7 @@
         </section>
     </main>
 
-    <!-- <script src="./app.js" type="module"></script> -->
+    <script src="./app.js" type="module"></script>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./sw.js', {

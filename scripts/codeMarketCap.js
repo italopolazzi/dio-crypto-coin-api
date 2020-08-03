@@ -3,6 +3,12 @@ import { CMC_API_KEY } from '/api.js'
 import { CoinMarketCapError } from '/errors.js'
 
 
+const headers = {
+  method: 'get',
+  mode: 'cors',
+  cache: 'default'
+}
+
 export const renderCMCApiData = (data, quantity = 10, start = 0) => {
 
   const template = ({ name = "Bitcoin", symbol = "BIT", rank = 30, date = "2000-07-25T21:39:00.000Z" }) => {
@@ -55,7 +61,7 @@ export const renderCMCApiData = (data, quantity = 10, start = 0) => {
 export const loadCMCApiData = async (API_KEY = CMC_API_KEY) => {
   try {
     const url = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?CMC_PRO_API_KEY=${API_KEY}`
-    const response = await fetch(url)
+    const response = await fetch(url, headers)
     const json = await response.json()
     return json.data
   } catch (error) {
